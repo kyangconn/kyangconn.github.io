@@ -1,0 +1,56 @@
+article:
+  type: tech # tech/story
+  related_posts:
+    enable: false
+    title: 您可能感兴趣的文章
+  share: [wechat, weibo, email, link]
+
+logo:
+  subtitle: '欢迎来到浅海深井博客！ | 🤔也许我该会点更多的，这样这里就不会看着这么空旷了'
+
+inject:
+  head:
+    - <link href="https://cdn.jsdelivr.net/gh/irozhi/HarmonyOS-Sans/HarmonyOS_Sans_SC/HarmonyOS_Sans_SC_Medium.woff2" rel="stylesheet">
+  script:
+
+style:
+  font-family: 
+    body: '"HarmonyOS Sans SC", sans-serif'
+
+menubar:
+  columns: 4
+  items:
+    # 博客主页
+    - id: home
+      theme: '#1BCDFC'
+      icon: solar:home-2-bold-duotone
+      title: 博客
+      url: /
+    
+    # 关于页面
+    - id: about
+      theme: '#3DC550'
+      icon: solar:user-circle-bold-duotone
+      title: 关于
+      url: /about/
+    
+    # 友情链接
+    - id: friends
+      theme: '#E91E63'
+      icon: solar:chat-square-like-bold-duotone
+      title: 友链
+      url: /friends/
+    
+    # 更多 - 可以是链接集合页或其他
+    - id: more
+      theme: '#FA6400'
+      icon: solar:link-circle-bold-duotone
+      title: 更多
+      url: /more/
+
+footer:
+  content: |
+    网站备案号：<a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">待备案</a>
+    公安备案号：<a href="http://www.beian.gov.cn/" target="_blank" rel="noopener noreferrer">待备案</a>
+    本站由 [{author.name}](/) 使用 [{theme.name} {theme.version}]({theme.tree}) 主题创建。联系方式：<a href="mailto:kyangconn@petalmail.com">kyangconn@petalmail.com</a>
+    本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。

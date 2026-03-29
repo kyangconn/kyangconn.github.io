@@ -8,44 +8,25 @@ date: 2026-03-28 20:32:25
 这里是我的一些朋友和有用的资源链接。
 {% friends blogs %}
 
+## 我的其他站点
+
+未上线，敬请期待
+
+<!-- {% grid %} -->
+<!-- cell -->
+<!-- {% link https://kyangconn.cn/ 个人博客 desc:true icon:https://kyangconn.cn/images/icon.ico %} -->
+<!-- cell -->
+<!-- {% link https://status.kyangconn.cn/ 状态页面 desc:true icon:https://status.kyangconn.cn/favicon.ico %} -->
+<!-- {% endgrid %} -->
+
 ## 其他有用的项目
 
-<div class="link-grid">
+{% grid %}
+
+<!-- cell -->
 {% link https://github.com/xaoxuu/hexo-theme-stellar Stellar主题仓库 desc:true icon:https://github.githubassets.com/favicons/favicon.png %}
-{% link https://hexo.io/ Hexo官方仓库 desc:true icon:https://hexo.io/favicon.ico %}
-</div>
 
-<style>
-.link-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
+<!-- cell -->
+{% link https://hexo.io/ Hexo官方仓库 desc:true icon:https://hexo.io/icon/favicon-32x32.png %}
 
-@media (max-width: 768px) {
-  .link-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.md-text .tag-plugin.link {
-  margin: 0;
-  justify-content: flex-start;
-  display: block;
-}
-
-.md-text .link-card {
-  width: 100%;
-  max-width: 100%;
-  height: 100%;
-}
-
-.md-text .link-card.rich {
-  width: 100%;
-}
-
-.link-grid .tag-plugin.link {
-  height: 100%;
-}
-</style>
+{% endgrid %}

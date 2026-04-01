@@ -48,3 +48,27 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+  sync-to-esa:
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+      - name: Configure Git
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          
+      - name: Sync to esa-pages branch
+        run: |
+          git fetch origin esa-pages:esa-pages 2>/dev/null || true
+          git checkout esa-pages 2>/dev/null || git checkout -b esa-pages
+
+          git merge --no-commit --strategy-option=ours main || echo "Merge completed or no changes"
+
+          git add .
+          git commit -m "Sync from main [skip ci]" || echo "No changes to commit"
+
+          git push origin esa-pages

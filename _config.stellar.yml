@@ -13,7 +13,7 @@ inject:
     - <link rel="stylesheet" href="/css/custom-fonts.css">
   script:
 
-api: https://site-info-api-cydluvbpvi.cn-shenzhen.fcapp.run?url=${href}
+api: https://site-info.kyangconn.cn?url=${href}
 
 style:
   font-family: 

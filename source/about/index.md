@@ -57,14 +57,14 @@ graph TD
     subgraph 公网服务器
         Nginx_ECS --> API
         Nginx_ECS --> Uptime
-        Nginx_ECS --> FRPS
+        Nginx_ECS --> Anubis[Anubis<br/>PoW爬虫防护]
+        Anubis --> FRPS[FRPS<br/>FRP隧道]
     end
 
     FRPS -->|FRP 加密隧道 | FRPC[frpc]
 
     subgraph 家庭内网
         FRPC --> Traefik[Traefik<br/>Docker Ingress网关]
-        Traefik --> Homarr[Homarr]
         Traefik --> Internal_Uptime[Internal Uptime]
         Traefik --> Gitea[Gitea]
         Traefik --> Astrbot[Astrbot]

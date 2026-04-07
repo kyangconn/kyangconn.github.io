@@ -1,7 +1,8 @@
 article:
   type: tech # tech/story
+  auto_excerpt: 50
   related_posts:
-    enable: false
+    enable: true
     title: 您可能感兴趣的文章
   share: [wechat, weibo, email, link]
 

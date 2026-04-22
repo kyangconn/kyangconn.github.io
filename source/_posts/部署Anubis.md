@@ -1,10 +1,10 @@
 ---
-layout: blog
 title: 部署 Anubis 作为网站防护
 date: 2026-04-05 10:00:00
 tags: ["Anubis", "安全防护", "AI生成"]
-category: ["网络安全", "技术实践"]
+category: ["技术实践", "网络安全"]
 description: "记录使用 Anubis 进行 Proof of Work 爬虫防护的部署过程"
+mermaid: true
 ---
 
 ## 前言

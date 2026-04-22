@@ -1,9 +1,8 @@
 ---
-layout: blog
 title: 吐槽使用Traefik
 date: 2026-03-28 22:08:44
 tags: ["Traefik", "踩坑", "配置"]
-category: ["网络架构", "技术实践"]
+category: ["技术实践", "网络架构"]
 description: "吐槽迁移Traefik中遇到的问题和配置"
 ---
 

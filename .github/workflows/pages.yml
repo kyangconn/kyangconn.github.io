@@ -69,7 +69,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          recursive: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+          submodules: recursive
           
       - name: Configure Git
         run: |

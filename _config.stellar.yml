@@ -55,5 +55,5 @@ footer:
   content: |
     <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer">粤ICP备2026034964号</a>
     <a href="https://beian.mps.gov.cn/#/query/webSearch?code=44030002011642" rel="noreferrer" target="_blank">粤公网安备44030002011642号</a>
-    本站由 [{author.name}](/) 使用 [{theme.name} {theme.version}]({theme.tree}) 主题创建。联系方式：<a href="mailto:kyangconn@petalmail.com">kyangconn@petalmail.com</a>
+    本站由 [{author.name}](/) 使用 [{theme.name} {theme.version}]({theme.tree}) 主题创建。联系方式：<a href="mailto:contact@kyangconn.cn">contact@kyangconn.cn</a>
     本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。

@@ -3,7 +3,17 @@ name: Pages
 on:
   push:
     branches:
-      - main # default branch
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -11,30 +21,34 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          # If your repository depends on submodule, please see: https://github.com/actions/checkout
           submodules: recursive
+          
       - name: Use Node.js 22
         uses: actions/setup-node@v6
         with:
-          # Examples: 20, 18.19, >=16.20.2, lts/Iron, lts/Hydrogen, *, latest, current, node
-          # Ref: https://github.com/actions/setup-node#supported-version-syntax
           node-version: "22"
-      - name: Cache NPM dependencies
-        uses: actions/cache@v5
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-npm-cache
-          restore-keys: |
-            ${{ runner.OS }}-npm-cache
+          cache: "npm"
+          
       - name: Install Dependencies
         run: npm install
+        
       - name: Build
         run: npm run build
+
+      - name: Check Pages output
+        run: |
+          ls -la ./public
+          test -f ./public/index.html
+          find ./public -type l -print -quit | grep -q . && {
+            echo "Symlink found in public; Pages artifact cannot contain symlinks"
+            exit 1
+          } || true
+          
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./public
+
   deploy:
     needs: build
     permissions:
@@ -47,15 +61,16 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v5 
+        
   sync-to-esa:
-    needs: [build, deploy]
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0
+          recursive: true
+          
       - name: Configure Git
         run: |
           git config --global user.name 'GitHub Actions'

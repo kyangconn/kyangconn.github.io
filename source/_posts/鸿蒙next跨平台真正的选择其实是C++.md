@@ -1,5 +1,5 @@
 ---
-title: 鸿蒙next跨平台真正的选择其实是...C++!
+title: "鸿蒙next跨平台真正的选择其实是?"
 date: 2026-06-30
 tags: ["HarmonyOS", "C++", "Qt", "跨平台", "AI生成"]
 category: ["技术实践", "跨平台"]

@@ -85,7 +85,28 @@ jobs:
           git fetch --prune origin main esa-pages
           git switch esa-pages 2>/dev/null || git switch -c esa-pages origin/esa-pages
 
+          set +e
           git merge --no-commit --strategy-option=ours origin/main
+          merge_status=$?
+          set -e
+
+          # esa-pages is intentionally different from main:
+          # - it does not run GitHub Pages workflows
+          # - it keeps its own Stellar config for the ICP/footer block
+          git rm -r --ignore-unmatch .github
+          git checkout HEAD -- _config.stellar.yml
+          git add -A .github _config.stellar.yml
+
+          conflicts="$(git diff --name-only --diff-filter=U)"
+          if [ -n "$conflicts" ]; then
+            echo "Unresolved merge conflicts:"
+            echo "$conflicts"
+            exit 1
+          fi
+
+          if [ "$merge_status" -ne 0 ]; then
+            echo "Merge had conflicts, but known branch-specific files were resolved."
+          fi
 
           git add -A
           git commit -m "Sync from main [skip ci]" || echo "No changes to commit"

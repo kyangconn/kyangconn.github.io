@@ -95,7 +95,7 @@ jobs:
           # - it keeps its own Stellar config for the ICP/footer block
           git rm -r --ignore-unmatch .github
           git checkout HEAD -- _config.stellar.yml
-          git add -A .github _config.stellar.yml
+          git add -A -- _config.stellar.yml
 
           conflicts="$(git diff --name-only --diff-filter=U)"
           if [ -n "$conflicts" ]; then

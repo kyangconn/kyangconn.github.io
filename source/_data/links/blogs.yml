@@ -1,9 +1,14 @@
 - title: Yuan's Blog
-  url: https://blog.geekie.site/
-  icon: https://blog.geekie.site/images/favicon2.ico
+  url: https:///ellisyuan.com/
+  icon: https://ellisyuan.com/images/favicon2.ico
   description: 某群群主的博客，收藏用
 
 - title: Xaoxuu's Blog
   url: https://xaoxuu.com/
   icon: https://gcore.jsdelivr.net/gh/cdn-x/xaoxuu@main/favicon/favicon-32x32.png
   description: 这个主题的开发者博客。
+
+- title: 羽翼城大佬
+  url: https://www.dogfight360.com/blog/
+  icon: https://www.dogfight360.com/blog/wp-content/uploads/2014/12/cropped-cropped-QQ%E5%9B%BE%E7%89%87201412071552001-32x32.jpg
+  description: 这个大佬开发了很多好用的软件

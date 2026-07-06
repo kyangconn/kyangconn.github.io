@@ -14,14 +14,16 @@ inject:
     - <link rel="stylesheet" href="/css/custom-fonts.css">
   script:
 
-api: https://site-info.kyangconn.cn?url=${href}
+data_services:
+  siteinfo:
+    api: https://site-info.kyangconn.cn?url={href}
 
 style:
   font-family: 
     body: '"HarmonyOS Sans SC", sans-serif'
 
 menubar:
-  columns: 4
+  columns: 3
   items:
     # 博客主页
     - id: home
@@ -43,13 +45,6 @@ menubar:
       icon: solar:chat-square-like-bold-duotone
       title: 友链
       url: /friends/
-    
-    # 更多 - 可以是链接集合页或其他
-    - id: more
-      theme: '#FA6400'
-      icon: solar:link-circle-bold-duotone
-      title: 更多
-      url: /more/
 
 comments:
   service: giscus
@@ -71,3 +66,4 @@ comments:
     data-lang: zh-CN
     data-loading: lazy
     crossorigin: anonymous
+

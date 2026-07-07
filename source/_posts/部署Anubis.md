@@ -119,7 +119,6 @@ REDIRECT_DOMAINS=example.kyangconn.cn, example2.kyangconn.cn
 默认的策略文件位于 `/usr/share/doc/anubis/botPolicies.yaml`，复制一份到 `/etc/anubis/novaPolicies.yaml` 后进行修改：
 
 ```yaml
-
 # 自定义规则
 rules:
   # 允许 API 接口，避免影响自动化调用

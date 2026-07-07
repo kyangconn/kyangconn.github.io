@@ -201,7 +201,7 @@ React UI 也一样。别一上来就给 MUI、Ant Design、Chakra。先问清楚
 
 这件事最后还是绕回我之前那篇"推荐你使用 Agent"的想法。
 
-{% link /2026/03/23/推荐你使用Agent/ 推荐你使用 Agent %}
+{% link /2026/03/24/推荐你使用Agent/ 推荐你使用 Agent %}
 
 现在 AI 工具对程序员和专业用户已经很好用了。你知道怎么拆问题、怎么写约束、怎么要求反证、知道什么时候该去 GitHub issue、npm trends、State of React、Reddit、B站和 YouTube 交叉验证，那 AI 会非常强。
 

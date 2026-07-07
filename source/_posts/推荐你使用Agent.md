@@ -1,6 +1,6 @@
 ---
 title: 推荐你使用 Agent
-date: 2026-03-24
+date: 2026-03-24 12:00:00
 tags: ["AI", "Agent", "碎碎念", "AI生成"]
 category: "随想"
 description: "最近一直在想 Agent 这件事，有些零散的想法记录一下"
